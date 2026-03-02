@@ -2,8 +2,8 @@ package node;
 
 public class Node<T>{
     private T value;
-    private T next;
-    private T prev;
+    private Node<T> next;
+    private Node<T> prev;
 
     public Node(T obj){
         this.value = obj;
@@ -15,11 +15,11 @@ public class Node<T>{
         return this.value;
     }
 
-    public T getNext(){
+    public Node<T> getNext(){
         return this.next;
     }
 
-    public T getPrev() {
+    public Node<T> getPrev() {
         return prev;
     }
 
@@ -27,11 +27,11 @@ public class Node<T>{
         this.value = obj;
     }
 
-    public void setNext(T obj){
-        this.next = obj;
+    public void setNext(Node<T> node){
+        this.next = node;
     }
 
-    public void setPrev(T prev) {
+    public void setPrev(Node<T> prev) {
         this.prev = prev;
     }   
 }
